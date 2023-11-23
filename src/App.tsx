@@ -22,11 +22,11 @@ function App() {
     
         const formattedTime = rawTime.toLocaleString('en-DE', {
           year: 'numeric',
-          month: 'long',
+          month: 'numeric',
           day: 'numeric',
           hour: 'numeric',
-          minute: '2-digit',
-          second: '2-digit'
+          minute: 'numeric',
+          second: 'numeric'
         });
     
         setHeaderData({
