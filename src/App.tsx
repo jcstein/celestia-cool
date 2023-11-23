@@ -3,7 +3,8 @@ import celestiaLogo from '/celestia.svg';
 import './App.css';
 
 function App() {
-  const [headerData, setHeaderData] = useState({ height: 'Loading...', time: 'Loading...' });
+  const [headerData, setHeaderData] = useState({ height: 'Loading...', time: 'Waiting...' });
+  const [lastTime, setLastTime] = useState('Loading...');
   const [maxBytes, setMaxBytes] = useState('Loading...');
   const [abciInfo, setAbciInfo] = useState({
     data: 'Loading...',
@@ -28,6 +29,10 @@ function App() {
           minute: 'numeric',
           second: 'numeric'
         });
+
+        if (headerData.time !== formattedTime) {
+          setLastTime(headerData.time);
+        }
     
         setHeaderData({
           height: dataHeader.result.header.height,
@@ -61,7 +66,7 @@ function App() {
     const interval = setInterval(fetchData, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [headerData]);
 
   const logoRef = useRef<HTMLImageElement | null>(null);
 
@@ -87,6 +92,7 @@ function App() {
       <div className="terminal-body">
         <h2>current height: {headerData.height}</h2>
         <h2>time of current height: {headerData.time}</h2>
+        <h2>time of last height: {lastTime}</h2>
         <h2>max bytes per block: {maxBytes} bytes</h2>
         <h2>binary: {abciInfo.data} v{abciInfo.version}</h2>
         <h2>total validators: {totalValidators}</h2>
@@ -94,10 +100,7 @@ function App() {
         <h2>unconfirmed transactions bytes: {unconfirmedTxsBytes} bytes</h2>
       </div>
       <p className="hacker-docs">
-        Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.
-      </p>
-      <p className="hacker-docs">
-        This site is <a href="https://github.com/jcstein/celestia-cool">open source</a>.
+        Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain. This site is <a href="https://github.com/jcstein/celestia-cool">open source</a>.
       </p>
       </div>
   );
