@@ -10,7 +10,6 @@ function App() {
     data: 'Loading...',
     version: 'Loading...',
   });
-  const [totalValidators, setTotalValidators] = useState('Loading...');
   const [unconfirmedTxs, setUnconfirmedTxs] = useState('Loading...');
   const [unconfirmedTxsBytes, setUnconfirmedTxsBytes] = useState('Loading...');
 
@@ -48,10 +47,6 @@ function App() {
         const responseAbci = await fetch('https://rpc.lunaroasis.net/abci_info');
         const dataAbci = await responseAbci.json();
         setAbciInfo(dataAbci.result.response);
-
-        const responseValidators = await fetch('https://rpc.lunaroasis.net/validators');
-        const dataValidators = await responseValidators.json();
-        setTotalValidators(dataValidators.result.total);
 
         const responseUnconfirmedTxs = await fetch('https://rpc.lunaroasis.net/unconfirmed_txs');
         const dataUnconfirmedTxs = await responseUnconfirmedTxs.json();
@@ -95,7 +90,6 @@ function App() {
         <h2>time of last block: {lastTime}</h2>
         <h2>max bytes per block: {maxBytes} bytes</h2>
         <h2>binary: {abciInfo.data} v{abciInfo.version}</h2>
-        <h2>total validators: {totalValidators}</h2>
         <h2>unconfirmed transactions: {unconfirmedTxs}</h2>
         <h2>unconfirmed transactions bytes: {unconfirmedTxsBytes} bytes</h2>
       </div>
