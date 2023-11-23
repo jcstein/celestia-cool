@@ -1,0 +1,79 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 1.5em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.hacker-docs {
+  font-size: 1rem;
+}
+
+.terminal {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  text-align: left;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem;
+  background-color: #333;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.terminal-title {
+  color: #fff;
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 1rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo.spin {
+  animation: spin 1s linear;
+}
