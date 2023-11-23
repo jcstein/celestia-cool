@@ -86,7 +86,7 @@ function App() {
       </div>
       <div className="terminal-body">
         <h2>current height: {headerData.height}</h2>
-        <h2>current time: {headerData.time}</h2>
+        <h2>time of current height: {headerData.time}</h2>
         <h2>max bytes per block: {maxBytes} bytes</h2>
         <h2>binary: {abciInfo.data} v{abciInfo.version}</h2>
         <h2>total validators: {totalValidators}</h2>
