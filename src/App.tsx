@@ -90,9 +90,9 @@ function App() {
         <h1 className="terminal-title">celestia.cool</h1>
       </div>
       <div className="terminal-body">
-        <h2>current height: {headerData.height}</h2>
-        <h2>time of current height: {headerData.time}</h2>
-        <h2>time of last height: {lastTime}</h2>
+        <h2>current block: {headerData.height}</h2>
+        <h2>time of current block: {headerData.time}</h2>
+        <h2>time of last block: {lastTime}</h2>
         <h2>max bytes per block: {maxBytes} bytes</h2>
         <h2>binary: {abciInfo.data} v{abciInfo.version}</h2>
         <h2>total validators: {totalValidators}</h2>
