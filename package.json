@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "2.9.4",
     "react": "^18.2.0",
+    "react-chartjs-2": "2.11.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

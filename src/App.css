@@ -38,13 +38,19 @@
 }
 
 .terminal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: #000;
   color: #0f0;
   font-family: 'Courier New', Courier, monospace;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 42px rgba(0, 255, 0, 0.5);
   text-align: left;
+  overflow: auto;
 }
 
 .terminal-header {
@@ -62,6 +68,10 @@
 }
 
 .terminal-body {
+  padding: 1rem;
+}
+
+.terminal-footer {
   padding: 1rem;
 }
 
