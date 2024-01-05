@@ -85,13 +85,38 @@ function App() {
         <h1 className="terminal-title">celestia.cool</h1>
       </div>
       <div className="terminal-body">
-        <h2>current block: {headerData.height}</h2>
-        <h2>time of current block: {headerData.time}</h2>
-        <h2>time of last block: {lastTime}</h2>
-        <h2>max bytes per block: {maxBytes} bytes</h2>
-        <h2>binary: {abciInfo.data} v{abciInfo.version}</h2>
-        <h2>unconfirmed transactions: {unconfirmedTxs}</h2>
-        <h2>unconfirmed transactions bytes: {unconfirmedTxsBytes} bytes</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Current block:</td>
+              <td>{headerData.height}</td>
+            </tr>
+            <tr>
+              <td>Time of current block:</td>
+              <td>{headerData.time}</td>
+            </tr>
+            <tr>
+              <td>Time of last block:</td>
+              <td>{lastTime}</td>
+            </tr>
+            <tr>
+              <td>Max bytes per block:</td>
+              <td>{maxBytes} bytes</td>
+            </tr>
+            <tr>
+              <td>Binary:</td>
+              <td>{abciInfo.data} v{abciInfo.version}</td>
+            </tr>
+            <tr>
+              <td>Unconfirmed transactions:</td>
+              <td>{unconfirmedTxs}</td>
+            </tr>
+            <tr>
+              <td>Unconfirmed transactions bytes:</td>
+              <td>{unconfirmedTxsBytes} bytes</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <p className="hacker-docs">
         Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain. This site is <a href="https://github.com/jcstein/celestia-cool">open source</a>.
