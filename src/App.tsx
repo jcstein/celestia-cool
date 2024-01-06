@@ -169,7 +169,7 @@ function App() {
             </tr>
             <tr>
               <td>Binary:</td>
-              <td>{abciInfo.version}</td>
+              <td>celestia-app {abciInfo.version}</td>
             </tr>
             <tr>
               <td>Unconfirmed transactions:</td>
