@@ -184,7 +184,7 @@ function App() {
       </div>
       <div className="terminal-footer">
         <text>
-        Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain. This site is <a href="https://github.com/jcstein/celestia-cool"> open source</a>. Data fetched from the <a href="https://rpc.lunaroasis.net">Lunar Oasis RPC</a>.
+        Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain. This <a href="https://github.com/jcstein/celestia-cool">site is open source</a> (<a href="https://plausible.io/celestia.cool">analytics</a>, too). Data fetched from the <a href="https://rpc.lunaroasis.net">Lunar Oasis RPC</a>.
         </text>
       </div>
     </div>
