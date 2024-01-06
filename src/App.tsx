@@ -88,7 +88,7 @@ function App() {
         <h1 className="terminal-title">celestia.cool</h1>
       </div>
       <div className="terminal-body">
-      <text>a Celestia mempool visualizer</text>
+      <h2 style={{ textAlign: 'right'}}>a Celestia mempool visualizer</h2>
       <Bar
   data={{
     labels: Array.from({ length: 60 }, (_, i) => i === 0 ? 'now' : `${i} seconds ago`),
