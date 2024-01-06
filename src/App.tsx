@@ -94,7 +94,7 @@ function App() {
     labels: Array.from({ length: 60 }, (_, i) => i === 0 ? 'now' : `${i} seconds ago`),
     datasets: [
       {
-        label: 'Unconfirmed transactions',
+        label: 'Unconfirmed Transactions',
         data: unconfirmedTxsCount,
         backgroundColor: 'rgba(145,245,230,0.4)',
         borderColor: 'rgba(145,245,230,1)',
@@ -102,7 +102,7 @@ function App() {
         yAxisID: 'y-axis-count',
       },
       {
-        label: 'Unconfirmed transaction bytes',
+        label: 'Unconfirmed Transaction Bytes',
         data: unconfirmedTxsBytesCount,
         backgroundColor: 'rgba(253,99,217,0.4)',
         borderColor: 'rgba(253,99,217,1)',
