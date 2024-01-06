@@ -88,7 +88,7 @@ function App() {
         <h1 className="terminal-title">celestia.cool</h1>
       </div>
       <div className="terminal-body">
-      <text>a Celestia mempool visualizoooooor</text>
+      <text>a Celestia mempool visualizer</text>
       <Bar
   data={{
     labels: Array.from({ length: 60 }, (_, i) => i === 0 ? 'now' : `${i} seconds ago`),
@@ -156,6 +156,14 @@ function App() {
               <td>{headerData.height}</td>
             </tr>
             <tr>
+              <td>Unconfirmed transactions:</td>
+              <td>{unconfirmedTxsCount[0]}</td>
+            </tr>
+            <tr>
+              <td>Unconfirmed transaction bytes:</td>
+              <td>{unconfirmedTxsBytesCount[0]}</td>
+            </tr>
+            <tr>
               <td>Time of current block:</td>
               <td>{headerData.time}</td>
             </tr>
@@ -169,15 +177,7 @@ function App() {
             </tr>
             <tr>
               <td>Binary:</td>
-              <td>celestia-app {abciInfo.version}</td>
-            </tr>
-            <tr>
-              <td>Unconfirmed transactions:</td>
-              <td>{unconfirmedTxsCount[0]}</td>
-            </tr>
-            <tr>
-              <td>Unconfirmed transaction bytes:</td>
-              <td>{unconfirmedTxsBytesCount[0]}</td>
+              <td>celestia-app v{abciInfo.version}</td>
             </tr>
           </tbody>
         </table>
